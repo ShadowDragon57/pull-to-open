@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class Wires_ClickOn_V1 : MonoBehaviour
@@ -12,8 +11,12 @@ public class Wires_ClickOn_V1 : MonoBehaviour
 
     private MeshRenderer wireRend;
 
+    public GameObject greenLight;
+    public GameObject redLight;
+
     void Start()
     {
+        redLight.SetActive(true);
         wireRend = GetComponent<MeshRenderer>();
     }
 
@@ -24,11 +27,7 @@ public class Wires_ClickOn_V1 : MonoBehaviour
 
     public void WinClick()
     {
-        GameObject[] winWires;
-        winWires = GameObject.FindGameObjectsWithTag("SolutionWire");
-        foreach (GameObject solutionWire in winWires)
-        {
-            wireRend.material = green;
-        }
+        wireRend.material = green;
+        redLight.SetActive(false);
     }
 }

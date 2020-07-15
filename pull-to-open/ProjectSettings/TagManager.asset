@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wire
   - SolutionWire
+  - Light
   layers:
   - Default
   - TransparentFX
