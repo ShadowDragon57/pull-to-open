@@ -13,8 +13,7 @@ public class ClickOn : MonoBehaviour
 
     void Start()
     {
-        myRend = GetComponent<MeshRenderer>();
-        
+        myRend = GetComponent<MeshRenderer>();       
     }
 
     public void ClickMe() 
