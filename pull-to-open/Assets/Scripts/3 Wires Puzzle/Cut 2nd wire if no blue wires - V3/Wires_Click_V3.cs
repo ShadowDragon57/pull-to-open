@@ -1,0 +1,30 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Wires_Click_V3 : MonoBehaviour
+{
+    [SerializeField]
+    private LayerMask clickablesLayer;
+
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit rayHit;
+
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out rayHit, Mathf.Infinity, clickablesLayer))
+            {
+                if (rayHit.collider.CompareTag("SolutionWire"))
+                {
+                    rayHit.collider.GetComponent<Wires_ClickOn_V3>().WinClick();
+                }
+                else
+                {
+                    rayHit.collider.GetComponent<Wires_ClickOn_V3>().ClickMe();
+                }
+            }
+        }
+    }
+}

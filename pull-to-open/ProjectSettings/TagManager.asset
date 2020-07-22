@@ -7,6 +7,11 @@ TagManager:
   - Wire
   - SolutionWire
   - Light
+  - BlueWire
+  - WhiteWire
+  - RedWire
+  - GreenWire
+  - YellowWire
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,6 @@ public class Wires_ClickOn_V2 : MonoBehaviour
 
     private MeshRenderer wireRend;
 
-    public GameObject greenLight;
     public GameObject redLight;
 
     void Start()
