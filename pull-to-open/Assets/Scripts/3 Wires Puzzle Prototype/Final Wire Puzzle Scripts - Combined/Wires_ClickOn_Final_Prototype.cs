@@ -16,17 +16,16 @@ public class Wires_ClickOn_Final_Prototype : MonoBehaviour
     private Material[] colours = new Material[5]; //An array for colours
 
     private GameObject solutionWire;
-   
+    //public GameObject greenLight;
+
     private List<GameObject> blueWires = new List<GameObject>(); //List of blue wires currently in the game, assigned by script.
     private List<int> solutions = new List<int>(); //List of possible solutions for it to randomly choose from later.
 
-    public int rndPickedSolution;
+    private int rndPickedSolution;
 
     private MeshRenderer meshTemp;
 
     private Material colour;
-
-    public int test;
 
     void Start()
     {
@@ -54,7 +53,6 @@ public class Wires_ClickOn_Final_Prototype : MonoBehaviour
     void AssignTagsAndColours(int picked) //This method assigns the tags and colours of wires according to the defuser manual- 
                                           //-and a bit of randomness.
     {
-        test = picked;
         if (picked == 1)
         {
             foreach (GameObject wire in allWires)
@@ -79,7 +77,7 @@ public class Wires_ClickOn_Final_Prototype : MonoBehaviour
             foreach (GameObject wire in allWires)
             {
                 meshTemp = wire.GetComponent<MeshRenderer>();
-                if (meshTemp.material.name == "blue (Instance)")
+                if (meshTemp.material.name == "Blue (Instance)")
                 {
                     wire.tag = "BlueWire"; //Changing all wires that are blue to have the bluewire tag for listing purposes.
                 }
@@ -104,7 +102,7 @@ public class Wires_ClickOn_Final_Prototype : MonoBehaviour
             foreach (GameObject wire in allWires)
             {
                 meshTemp = wire.GetComponent<MeshRenderer>();
-                if (meshTemp.material.name == "blue (Instance)")
+                if (meshTemp.material.name == "Blue (Instance)")
                 {
                     wire.tag = "BlueWire";
                 }
@@ -127,7 +125,7 @@ public class Wires_ClickOn_Final_Prototype : MonoBehaviour
             foreach (GameObject wire in allWires)
             {
                 meshTemp = wire.GetComponent<MeshRenderer>();
-                if (meshTemp.material.name == "blue (Instance)")
+                if (meshTemp.material.name == "Blue (Instance)")
                 {
                     wire.tag = "BlueWire";
                 }
@@ -164,6 +162,7 @@ public class Wires_ClickOn_Final_Prototype : MonoBehaviour
     {
         wireRend.material = invisible;
         redLight.SetActive(false);
+        //greenLight.SetActive(true);
     }
 
     public void ClickMe(MeshRenderer wireRend)
