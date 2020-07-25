@@ -16,7 +16,7 @@ public class Wires_ClickOn_Final_Prototype : MonoBehaviour
     private Material[] colours = new Material[5]; //An array for colours
 
     private GameObject solutionWire;
-    //public GameObject greenLight;
+    public GameObject greenLight;
 
     private List<GameObject> blueWires = new List<GameObject>(); //List of blue wires currently in the game, assigned by script.
     private List<int> solutions = new List<int>(); //List of possible solutions for it to randomly choose from later.
@@ -162,7 +162,7 @@ public class Wires_ClickOn_Final_Prototype : MonoBehaviour
     {
         wireRend.material = invisible;
         redLight.SetActive(false);
-        //greenLight.SetActive(true);
+        greenLight.SetActive(true);
     }
 
     public void ClickMe(MeshRenderer wireRend)

@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Wires_Click_Final_Prototype : MonoBehaviour
 {
     [SerializeField]
     private LayerMask clickablesLayer; //Declaring the layer of clickable objects to be set in Unity.
+    [SerializeField]
+    private Text clock;
 
     private MeshRenderer wireRend; //Declaring the renderer to use later.
 
