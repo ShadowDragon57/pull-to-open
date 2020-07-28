@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Wires_Click_Final_Prototype : MonoBehaviour
 {
     [SerializeField]
     private LayerMask clickablesLayer; //Declaring the layer of clickable objects to be set in Unity.
     [SerializeField]
-    private GameObject[] wires = new GameObject[3];
+    private Text clock;
 
     private MeshRenderer wireRend; //Declaring the renderer to use later.
 
@@ -18,10 +19,11 @@ public class Wires_Click_Final_Prototype : MonoBehaviour
         {
             RaycastHit rayHit; //Declaring the RayCast variable, this is what projects from the camera and determines- 
                                //-what has been clicked on.
-
+            Debug.Log("click");
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out rayHit, Mathf.Infinity, clickablesLayer)) 
                 //When the left mouse button is clicked, if all the parameters are met, it allows the code to move forward.
             {
+                Debug.Log("click1");
                 wireRend = rayHit.collider.GetComponent<MeshRenderer>();
                 if (rayHit.collider.name == "SolutionWire") //If the player clicks the wire that is named SolutionWire,- 
                                                             //-it calls the WinClick method in the "ClickOn" class.
