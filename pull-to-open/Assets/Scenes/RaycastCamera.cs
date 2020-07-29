@@ -1,10 +1,9 @@
 ﻿using System.Collections;
-using System.Collections;
 using UnityEngine;
 
 public class RaycastCamera : MonoBehaviour
 {
-    public GameObject wiresLight;
+    public GameObject wirebox;
     
     Ray ray;
     RaycastHit hit;
@@ -20,11 +19,16 @@ public class RaycastCamera : MonoBehaviour
     void Update()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Light wireLight = wiresSelectLight.GetComponent("Light");
+        Light wireLight = (Light)wirebox.GetComponent("Light");
         
         if (Physics.Raycast(ray, out hit))
         {
-            wireLight.enabled = !wireLight.enabled;
+            wireLight.enabled = true;
         }
+        else
+        {
+            wireLight.enabled = false;
+        }
+
     }
 }
