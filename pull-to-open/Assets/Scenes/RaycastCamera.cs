@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class RaycastCamera : MonoBehaviour
 {
-    public GameObject wirebox;
+    //public GameObject wirebox;
     public GameObject WireButton;
+    public GameObject BookcaseButton;
+    public GameObject CardsButton;
     
     Ray ray;
     RaycastHit hit;
@@ -20,17 +22,24 @@ public class RaycastCamera : MonoBehaviour
     void Update()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Light wireLight = (Light)wirebox.GetComponent("Light");
         
         if (Physics.Raycast(ray, out hit) & hit.collider.name == "wirebox")
-        {
-            wireLight.enabled = true;
+        { 
             WireButton.SetActive(true);
+        }
+        else if (Physics.Raycast(ray, out hit) & hit.collider.name == "cards")
+        {
+            CardsButton.SetActive(true);
+        }
+        else if(Physics.Raycast(ray, out hit) & hit.collider.name == "bookcase")
+        {
+            BookcaseButton.SetActive(true);
         }
         else
         {
-            wireLight.enabled = false;
             WireButton.SetActive(false);
+            CardsButton.SetActive(false);
+            BookcaseButton.SetActive(false);
         }
 
     }

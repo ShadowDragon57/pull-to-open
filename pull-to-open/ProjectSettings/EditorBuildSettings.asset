@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Room.unity
     guid: 0c99fdbd31a03e34f93abd6feac0382e
+  - enabled: 1
+    path: Assets/Scenes/Puzzle 3 - Bookcase.unity
+    guid: 1a8f2159083075645a927d3c5d586372
+  - enabled: 1
+    path: Assets/Scenes/Puzzle 2 - Playing Cards.unity
+    guid: 090149b04aef9184eaff0fcb79d421eb
   m_configObjects: {}

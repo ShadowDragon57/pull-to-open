@@ -11,6 +11,15 @@ public class SceneMover : MonoBehaviour
     {
         SceneManager.LoadScene("Puzzle 1 - Wires");
     }
+    public void StartPlayingCardsPuzzle()
+    {
+        SceneManager.LoadScene("Puzzle 2 - Playing Cards");
+    }
 
-   
+    public void StartBookcasePuzzle()
+    {
+        SceneManager.LoadScene("Puzzle 3 - Bookcase");
+    }
+
+
 }
