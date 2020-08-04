@@ -21,5 +21,9 @@ public class SceneMover : MonoBehaviour
         SceneManager.LoadScene("Puzzle 3 - Bookcase");
     }
 
+    public void StartPunchedPuzzle()
+    {
+        SceneManager.LoadScene("Puzzle 4 - Punch Card");
+    }
 
 }
