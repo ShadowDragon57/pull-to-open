@@ -81,7 +81,6 @@ public class RaycastCamera : MonoBehaviour
         }
 
         //Puzzle UI
-        Debug.Log(hit.collider.name);
 
         if (Physics.Raycast(ray, out hit) & hit.collider.name == "wirebox")
         { 

@@ -78,6 +78,7 @@ public class Difficulty : MonoBehaviour
                     PunchedPuzzle.SetActive(true);
                     break;
             }
+            Debug.Log(puzzles[i]);
         }
     }
 }
