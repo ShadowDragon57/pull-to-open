@@ -56,6 +56,11 @@ public class Difficulty : MonoBehaviour
 
     public void spawnPuzzles(int diff, List<string> puzzles)
     {
+        WirePuzzle.SetActive(false);
+        CardsPuzzle.SetActive(false);
+        BookcasePuzzle.SetActive(false);
+        PunchedPuzzle.SetActive(false);
+
         for (int i = 0; i < diff; i++)
         {
             switch (puzzles[i])
