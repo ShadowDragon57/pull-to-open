@@ -10,6 +10,8 @@ public class Difficulty : MonoBehaviour
     public GameObject BookcasePuzzle;
     public GameObject CardsPuzzle;
     public GameObject PunchedPuzzle;
+    public GameObject SafePuzzle;
+    public GameObject PhonePuzzle;
 
     public void LoadPuzzles()
     {
@@ -17,19 +19,25 @@ public class Difficulty : MonoBehaviour
         puzzles.Add("cards");
         puzzles.Add("bookcase");
         puzzles.Add("punchreader");
+        puzzles.Add("safe");
+        puzzles.Add("phone");
     }
     
     void ShufflePuzzles<T>(List<T> puzzlesList)
     {
         System.Random random = new System.Random();
-        int n = puzzlesList.Count;
-        while (n>1)
+        
+        for (int i=0; i<6; i++)
         {
-            int k = random.Next(n);
-            n--;
-            T temp = puzzlesList[k];
-            puzzlesList[k] = puzzlesList[n];
-            puzzlesList[n] = temp;
+            int j = random.Next(i+1);
+            var temp = puzzlesList[i];
+            puzzlesList[i] = puzzlesList[j];
+            puzzlesList[j] = temp;
+        }
+
+        for (int i=0; i<6; i++)
+        {
+            Debug.Log(puzzles[i]);
         }
     }
     
@@ -60,6 +68,8 @@ public class Difficulty : MonoBehaviour
         CardsPuzzle.SetActive(false);
         BookcasePuzzle.SetActive(false);
         PunchedPuzzle.SetActive(false);
+        SafePuzzle.SetActive(false);
+        PhonePuzzle.SetActive(false);
 
         for (int i = 0; i < diff; i++)
         {
@@ -76,6 +86,12 @@ public class Difficulty : MonoBehaviour
                     break;
                 case "punchreader":
                     PunchedPuzzle.SetActive(true);
+                    break;
+                case "safe":
+                    SafePuzzle.SetActive(true);
+                    break;
+                case "phone":
+                    PhonePuzzle.SetActive(true);
                     break;
             }
             Debug.Log(puzzles[i]);

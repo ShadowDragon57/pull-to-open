@@ -19,7 +19,9 @@ public class RaycastCamera : MonoBehaviour
     public GameObject BookcaseButton;
     public GameObject CardsButton;
     public GameObject PunchedButton;
-    
+    public GameObject SafeButton;
+    public GameObject PhoneButton;
+
     Ray ray;
     RaycastHit hit;
 
@@ -98,12 +100,22 @@ public class RaycastCamera : MonoBehaviour
         {
             PunchedButton.SetActive(true);
         }
+        else if (Physics.Raycast(ray, out hit) & hit.collider.name == "safe")
+        {
+            SafeButton.SetActive(true);
+        }
+        else if (Physics.Raycast(ray, out hit) & hit.collider.name == "phone")
+        {
+            PhoneButton.SetActive(true);
+        }
         else
         {
             WireButton.SetActive(false);
             CardsButton.SetActive(false);
             BookcaseButton.SetActive(false);
             PunchedButton.SetActive(false);
+            SafeButton.SetActive(false);
+            PhoneButton.SetActive(false);
         }
 
     }

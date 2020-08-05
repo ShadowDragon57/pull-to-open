@@ -26,4 +26,13 @@ public class SceneMover : MonoBehaviour
         SceneManager.LoadScene("Puzzle 4 - Punch Card");
     }
 
+    public void StartSafePuzzle()
+    {
+        SceneManager.LoadScene("Puzzle 5 - Safe");
+    }
+
+    public void StartPhonePuzzle()
+    {
+        SceneManager.LoadScene("Puzzle 6 - Rotary Phone");
+    }
 }

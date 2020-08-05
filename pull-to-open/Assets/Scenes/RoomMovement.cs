@@ -15,21 +15,21 @@ public class RoomMovement : MonoBehaviour
 
     public void NavLeft()
     {
-        RoomCamera.transform.position = new Vector3(-114.5f, 95f, -160f);
+        RoomCamera.transform.position = new Vector3(-114.5f, 95f, -150f);
     }
 
     public void NavRight()
     {
-        RoomCamera.transform.position = new Vector3(164.5f, 95f, -160f);
+        RoomCamera.transform.position = new Vector3(164.5f, 95f, -150f);
     }
 
     public void NavFront()
     {
-        RoomCamera.transform.position = new Vector3(25.5f, 95f, -160f);
+        RoomCamera.transform.position = new Vector3(25.5f, 95f, -150f);
     }
 
     public void NavBack()
     {
-        RoomCamera.transform.position = new Vector3(-254.5f, 95f, -160f);
+        RoomCamera.transform.position = new Vector3(-254.5f, 95f, -150f);
     }
 }
