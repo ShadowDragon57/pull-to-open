@@ -35,4 +35,9 @@ public class SceneMover : MonoBehaviour
     {
         SceneManager.LoadScene("Puzzle 6 - Rotary Phone");
     }
+
+    public void ReturnToRoom()
+    {
+        SceneManager.LoadScene("Room");
+    }
 }
