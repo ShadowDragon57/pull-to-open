@@ -12,6 +12,7 @@ TagManager:
   - RedWire
   - GreenWire
   - YellowWire
+  - book
   layers:
   - Default
   - TransparentFX
