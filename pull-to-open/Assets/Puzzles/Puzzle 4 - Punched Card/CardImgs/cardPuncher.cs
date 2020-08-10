@@ -16,6 +16,8 @@ public class cardPuncher : MonoBehaviour
     public GameObject CardStrip9;
     public GameObject CardStrip10;
 
+    List<GameObject> Card = new List<GameObject>();
+
     public Texture Strip0;
     public Texture Strip1;
     public Texture Strip2;
@@ -54,7 +56,7 @@ public class cardPuncher : MonoBehaviour
     public Texture StripZ;
     public Texture StripBlank;
 
-    List<GameObject> Card = new List<GameObject>();
+    
 
     int Count = 0;
 
@@ -76,7 +78,7 @@ public class cardPuncher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (Count < 10)
+        if (Count < 10)
         {
             if (Input.anyKey)
             {
