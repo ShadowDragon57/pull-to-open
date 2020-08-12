@@ -1586,6 +1586,7 @@ MonoBehaviour:
   PunchedPuzzle: {fileID: 5794664382968659011}
   SafePuzzle: {fileID: 498131958}
   PhonePuzzle: {fileID: 272819301}
+  puzzlesObjects: {fileID: 2056182697}
 --- !u!4 &178476631
 Transform:
   m_ObjectHideFlags: 0

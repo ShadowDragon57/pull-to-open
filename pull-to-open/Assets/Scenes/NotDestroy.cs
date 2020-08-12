@@ -21,6 +21,8 @@ public class NotDestroy : MonoBehaviour
     public GameObject SafePuzzle;
     public GameObject PhonePuzzle;
 
+    public GameObject puzzlesObjects;
+
     void Awake()
     {
         if (instance == null)
@@ -30,8 +32,8 @@ public class NotDestroy : MonoBehaviour
         }
         else if (instance != this)
         {
-            //gameObject.SetActive(false);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            
             ReEnterRoom();
         }
     }
@@ -48,6 +50,7 @@ public class NotDestroy : MonoBehaviour
   
     void ReEnterRoom()
     {
+        puzzlesObjects.SetActive(true);
         loadList();
         loadPuzzle();
     }
