@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SceneMover : MonoBehaviour
 {
     // Start is called before the first frame update
+
     public void StartWiresPuzzle()
     {
         SceneManager.LoadScene("Puzzle 1 - Wires");
@@ -23,7 +24,7 @@ public class SceneMover : MonoBehaviour
 
     public void StartPunchedPuzzle()
     {
-        SceneManager.LoadScene("Puzzle 4 - Punch Card");
+        SceneManager.LoadScene("Puzzle 4 - Punched Card");
     }
 
     public void StartSafePuzzle()
@@ -39,5 +40,6 @@ public class SceneMover : MonoBehaviour
     public void ReturnToRoom()
     {
         SceneManager.LoadScene("Room");
+        
     }
 }

@@ -1,17 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Difficulty : MonoBehaviour
 {
-    public List<string> puzzles = new List<string>();
+    List<string> puzzles = new List<string>();
 
-    public GameObject WirePuzzle;
-    public GameObject BookcasePuzzle;
-    public GameObject CardsPuzzle;
-    public GameObject PunchedPuzzle;
-    public GameObject SafePuzzle;
-    public GameObject PhonePuzzle;
+    public GameObject puzzleDisplay1;
+    public GameObject puzzleDisplay2;
+    public GameObject puzzleDisplay3;
+    public GameObject puzzleDisplay4;
+    public GameObject puzzleDisplay5;
+    public GameObject puzzleDisplay6;
+
+    List<GameObject> puzzlesUI = new List<GameObject>();
+
+    public Texture wires;
+    public Texture cards;
+    public Texture books;
+    public Texture punched;
+    public Texture safe;
+    public Texture phone;
+
+    void Start()
+    {
+        puzzlesUI.Add(puzzleDisplay1);
+        puzzlesUI.Add(puzzleDisplay2);
+        puzzlesUI.Add(puzzleDisplay3);
+        puzzlesUI.Add(puzzleDisplay4);
+        puzzlesUI.Add(puzzleDisplay5);
+        puzzlesUI.Add(puzzleDisplay6);
+    }
 
     public void LoadPuzzles()
     {
@@ -33,11 +53,6 @@ public class Difficulty : MonoBehaviour
             var temp = puzzlesList[i];
             puzzlesList[i] = puzzlesList[j];
             puzzlesList[j] = temp;
-        }
-
-        for (int i=0; i<6; i++)
-        {
-            Debug.Log(puzzles[i]);
         }
     }
     
@@ -64,37 +79,49 @@ public class Difficulty : MonoBehaviour
 
     public void spawnPuzzles(int diff, List<string> puzzles)
     {
-        WirePuzzle.SetActive(false);
-        CardsPuzzle.SetActive(false);
-        BookcasePuzzle.SetActive(false);
-        PunchedPuzzle.SetActive(false);
-        SafePuzzle.SetActive(false);
-        PhonePuzzle.SetActive(false);
+        puzzleDisplay1.SetActive(false);
+        puzzleDisplay2.SetActive(false);
+        puzzleDisplay3.SetActive(false);
+        puzzleDisplay4.SetActive(false);
+        puzzleDisplay5.SetActive(false);
+        puzzleDisplay6.SetActive(false);
 
         for (int i = 0; i < diff; i++)
         {
+            puzzlesUI[i].SetActive(true);
             switch (puzzles[i])
             {
                 case "wirebox":
-                    WirePuzzle.SetActive(true);
+                    puzzlesUI[i].GetComponent<RawImage>().texture = wires;
+                    puzzlesUI[i].GetComponent<UIVariables>().puzzle = "wires";
+                    puzzlesUI[i].GetComponent<UIVariables>().completed = false;
                     break;
                 case "cards":
-                    CardsPuzzle.SetActive(true);
+                    puzzlesUI[i].GetComponent<RawImage>().texture = cards;
+                    puzzlesUI[i].GetComponent<UIVariables>().puzzle = "cards";
+                    puzzlesUI[i].GetComponent<UIVariables>().completed = false;
                     break;
                 case "bookcase":
-                    BookcasePuzzle.SetActive(true);
+                    puzzlesUI[i].GetComponent<RawImage>().texture = books;
+                    puzzlesUI[i].GetComponent<UIVariables>().puzzle = "bookcase";
+                    puzzlesUI[i].GetComponent<UIVariables>().completed = false;
                     break;
                 case "punchreader":
-                    PunchedPuzzle.SetActive(true);
+                    puzzlesUI[i].GetComponent<RawImage>().texture = punched;
+                    puzzlesUI[i].GetComponent<UIVariables>().puzzle = "punchreader";
+                    puzzlesUI[i].GetComponent<UIVariables>().completed = false;
                     break;
                 case "safe":
-                    SafePuzzle.SetActive(true);
+                    puzzlesUI[i].GetComponent<RawImage>().texture = safe;
+                    puzzlesUI[i].GetComponent<UIVariables>().puzzle = "safe";
+                    puzzlesUI[i].GetComponent<UIVariables>().completed = false;
                     break;
                 case "phone":
-                    PhonePuzzle.SetActive(true);
+                    puzzlesUI[i].GetComponent<RawImage>().texture = phone;
+                    puzzlesUI[i].GetComponent<UIVariables>().puzzle = "phone";
+                    puzzlesUI[i].GetComponent<UIVariables>().completed = false;
                     break;
             }
-            Debug.Log(puzzles[i]);
         }
     }
 }
