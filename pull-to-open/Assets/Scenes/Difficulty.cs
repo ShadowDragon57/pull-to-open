@@ -23,6 +23,14 @@ public class Difficulty : MonoBehaviour
     public Texture safe;
     public Texture phone;
 
+    public float timerValue = 60;
+    public float timerMins = 5;
+
+    public float timeRemaining;
+    public bool timerIsRunning = false;
+
+    public Text timeText;
+
     void Start()
     {
         puzzlesUI.Add(puzzleDisplay1);
@@ -31,6 +39,9 @@ public class Difficulty : MonoBehaviour
         puzzlesUI.Add(puzzleDisplay4);
         puzzlesUI.Add(puzzleDisplay5);
         puzzlesUI.Add(puzzleDisplay6);
+
+        timeRemaining = timerMins * timerValue;
+        
     }
 
     public void LoadPuzzles()
@@ -61,6 +72,7 @@ public class Difficulty : MonoBehaviour
         LoadPuzzles();
         ShufflePuzzles(puzzles);
         spawnPuzzles(2, puzzles);
+        timerIsRunning = true;
     }
 
     public void mediumDiff()
@@ -68,6 +80,7 @@ public class Difficulty : MonoBehaviour
         LoadPuzzles();
         ShufflePuzzles(puzzles);
         spawnPuzzles(4, puzzles);
+        timerIsRunning = true;
     }
 
     public void hardDiff()
@@ -75,6 +88,7 @@ public class Difficulty : MonoBehaviour
         LoadPuzzles();
         ShufflePuzzles(puzzles);
         spawnPuzzles(6, puzzles);
+        timerIsRunning = true;
     }
 
     public void spawnPuzzles(int diff, List<string> puzzles)
@@ -123,5 +137,39 @@ public class Difficulty : MonoBehaviour
                     break;
             }
         }
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (timerIsRunning)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
+                if(timeRemaining < 60)
+                {
+                    timeText.color = Color.red;
+                }
+            }
+            else
+            {
+                Debug.Log("Game Over - Timer Ran Out");
+                timeRemaining = 0;
+                timerIsRunning = false;
+            }
+        }
+    }
+
+    void DisplayTime(float timeToDisplay)
+    {
+        timeToDisplay += 1;
+
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }

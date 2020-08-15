@@ -88,8 +88,7 @@ public class CoverAssignment : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             Cover = hit.collider.gameObject.GetComponent<bookVariables>().cover;
-            coverSet(Cover);
-            
+            coverSet(Cover);  
         }
     }
 }

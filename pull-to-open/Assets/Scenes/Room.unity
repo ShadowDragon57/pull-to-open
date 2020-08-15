@@ -1471,6 +1471,7 @@ GameObject:
   - component: {fileID: 173408794}
   - component: {fileID: 173408793}
   - component: {fileID: 173408795}
+  - component: {fileID: 173408796}
   m_Layer: 5
   m_Name: puzzleIcon (1)
   m_TagString: Untagged
@@ -1545,6 +1546,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzle: 
   completed: 0
+--- !u!114 &173408796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173408791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2541e24cd508fb43ba21232f1aa5b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wires: {fileID: 2800000, guid: 953e488b3a81d6449ae6bd28555209cd, type: 3}
+  cards: {fileID: 2800000, guid: 47a2fabd910f48d4b89207f0c9fd399e, type: 3}
+  books: {fileID: 2800000, guid: cceb2cba868f8c244a8e26585b46eb39, type: 3}
+  punched: {fileID: 2800000, guid: 8ed44a055820fa84bb125074955efabc, type: 3}
+  safe: {fileID: 2800000, guid: 0f4d99a0d458a9b4383aa8652100e6aa, type: 3}
+  phone: {fileID: 2800000, guid: 171663383fd48164e91097f61694974e, type: 3}
 --- !u!1 &178476629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,6 +2295,7 @@ GameObject:
   - component: {fileID: 319640585}
   - component: {fileID: 319640584}
   - component: {fileID: 319640586}
+  - component: {fileID: 319640587}
   m_Layer: 5
   m_Name: puzzleIcon (3)
   m_TagString: Untagged
@@ -2350,6 +2370,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzle: 
   completed: 0
+--- !u!114 &319640587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319640582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2541e24cd508fb43ba21232f1aa5b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wires: {fileID: 2800000, guid: 953e488b3a81d6449ae6bd28555209cd, type: 3}
+  cards: {fileID: 2800000, guid: 47a2fabd910f48d4b89207f0c9fd399e, type: 3}
+  books: {fileID: 2800000, guid: cceb2cba868f8c244a8e26585b46eb39, type: 3}
+  punched: {fileID: 2800000, guid: 8ed44a055820fa84bb125074955efabc, type: 3}
+  safe: {fileID: 2800000, guid: 0f4d99a0d458a9b4383aa8652100e6aa, type: 3}
+  phone: {fileID: 2800000, guid: 171663383fd48164e91097f61694974e, type: 3}
 --- !u!1 &333976888
 GameObject:
   m_ObjectHideFlags: 0
@@ -6151,6 +6189,7 @@ GameObject:
   - component: {fileID: 1038994185}
   - component: {fileID: 1038994184}
   - component: {fileID: 1038994186}
+  - component: {fileID: 1038994187}
   m_Layer: 5
   m_Name: puzzleIcon (2)
   m_TagString: Untagged
@@ -6225,6 +6264,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzle: 
   completed: 0
+--- !u!114 &1038994187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038994182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2541e24cd508fb43ba21232f1aa5b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wires: {fileID: 2800000, guid: 953e488b3a81d6449ae6bd28555209cd, type: 3}
+  cards: {fileID: 2800000, guid: 47a2fabd910f48d4b89207f0c9fd399e, type: 3}
+  books: {fileID: 2800000, guid: cceb2cba868f8c244a8e26585b46eb39, type: 3}
+  punched: {fileID: 2800000, guid: 8ed44a055820fa84bb125074955efabc, type: 3}
+  safe: {fileID: 2800000, guid: 0f4d99a0d458a9b4383aa8652100e6aa, type: 3}
+  phone: {fileID: 2800000, guid: 171663383fd48164e91097f61694974e, type: 3}
 --- !u!1 &1050124996
 GameObject:
   m_ObjectHideFlags: 0
@@ -7549,6 +7606,7 @@ GameObject:
   - component: {fileID: 1285681650}
   - component: {fileID: 1285681649}
   - component: {fileID: 1285681651}
+  - component: {fileID: 1285681652}
   m_Layer: 5
   m_Name: puzzleIcon (6)
   m_TagString: Untagged
@@ -7623,6 +7681,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzle: 
   completed: 0
+--- !u!114 &1285681652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285681647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2541e24cd508fb43ba21232f1aa5b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wires: {fileID: 2800000, guid: 953e488b3a81d6449ae6bd28555209cd, type: 3}
+  cards: {fileID: 2800000, guid: 47a2fabd910f48d4b89207f0c9fd399e, type: 3}
+  books: {fileID: 2800000, guid: cceb2cba868f8c244a8e26585b46eb39, type: 3}
+  punched: {fileID: 2800000, guid: 8ed44a055820fa84bb125074955efabc, type: 3}
+  safe: {fileID: 2800000, guid: 0f4d99a0d458a9b4383aa8652100e6aa, type: 3}
+  phone: {fileID: 2800000, guid: 171663383fd48164e91097f61694974e, type: 3}
 --- !u!1 &1289644092
 GameObject:
   m_ObjectHideFlags: 0
@@ -8897,6 +8973,7 @@ GameObject:
   - component: {fileID: 1471205800}
   - component: {fileID: 1471205799}
   - component: {fileID: 1471205801}
+  - component: {fileID: 1471205802}
   m_Layer: 5
   m_Name: puzzleIcon (5)
   m_TagString: Untagged
@@ -8971,6 +9048,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzle: 
   completed: 0
+--- !u!114 &1471205802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471205797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2541e24cd508fb43ba21232f1aa5b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wires: {fileID: 2800000, guid: 953e488b3a81d6449ae6bd28555209cd, type: 3}
+  cards: {fileID: 2800000, guid: 47a2fabd910f48d4b89207f0c9fd399e, type: 3}
+  books: {fileID: 2800000, guid: cceb2cba868f8c244a8e26585b46eb39, type: 3}
+  punched: {fileID: 2800000, guid: 8ed44a055820fa84bb125074955efabc, type: 3}
+  safe: {fileID: 2800000, guid: 0f4d99a0d458a9b4383aa8652100e6aa, type: 3}
+  phone: {fileID: 2800000, guid: 171663383fd48164e91097f61694974e, type: 3}
 --- !u!1 &1474738563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9521,6 +9616,7 @@ GameObject:
   - component: {fileID: 1538458376}
   - component: {fileID: 1538458375}
   - component: {fileID: 1538458377}
+  - component: {fileID: 1538458378}
   m_Layer: 5
   m_Name: puzzleIcon (4)
   m_TagString: Untagged
@@ -9595,6 +9691,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzle: 
   completed: 0
+--- !u!114 &1538458378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538458373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2541e24cd508fb43ba21232f1aa5b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wires: {fileID: 2800000, guid: 953e488b3a81d6449ae6bd28555209cd, type: 3}
+  cards: {fileID: 2800000, guid: 47a2fabd910f48d4b89207f0c9fd399e, type: 3}
+  books: {fileID: 2800000, guid: cceb2cba868f8c244a8e26585b46eb39, type: 3}
+  punched: {fileID: 2800000, guid: 8ed44a055820fa84bb125074955efabc, type: 3}
+  safe: {fileID: 2800000, guid: 0f4d99a0d458a9b4383aa8652100e6aa, type: 3}
+  phone: {fileID: 2800000, guid: 171663383fd48164e91097f61694974e, type: 3}
 --- !u!1 &1550968055
 GameObject:
   m_ObjectHideFlags: 0
@@ -11525,6 +11639,11 @@ MonoBehaviour:
   punched: {fileID: 2800000, guid: bbf474fc52c18454098901768aa218b1, type: 3}
   safe: {fileID: 2800000, guid: 16e123af5e7414c41b2e6c7733dcd283, type: 3}
   phone: {fileID: 2800000, guid: fa4f7ee7fcb8b0b4393baaad15129052, type: 3}
+  timerValue: 60
+  timerMins: 1
+  timeRemaining: 0
+  timerIsRunning: 0
+  timeText: {fileID: 900582029}
 --- !u!1 &1994743377
 GameObject:
   m_ObjectHideFlags: 0

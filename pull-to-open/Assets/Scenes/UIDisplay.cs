@@ -21,6 +21,11 @@ public class UIDisplay : MonoBehaviour
     public GameObject SafePuzzle;
     public GameObject PhonePuzzle;
 
+    void Update()
+    {
+        loadList();
+        loadPuzzle();
+    }
     void loadList()
     {
         puzzlesUI.Add(puzzleDisplay1);
@@ -30,13 +35,6 @@ public class UIDisplay : MonoBehaviour
         puzzlesUI.Add(puzzleDisplay5);
         puzzlesUI.Add(puzzleDisplay6);
     }
-
-    void Update()
-    {
-        loadList();
-        loadPuzzle();
-    }
-
     public void loadPuzzle()
     {
         loadList();
