@@ -19,7 +19,6 @@ public class timer : MonoBehaviour
     void Start()
     {
         timeRemaining = timerMins * timerValue;
-        timerIsRunning = true;
     }
 
     // Update is called once per frame

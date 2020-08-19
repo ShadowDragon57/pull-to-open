@@ -56,7 +56,13 @@ public class cardPuncher : MonoBehaviour
     public Texture StripZ;
     public Texture StripBlank;
 
-    
+    Texture selectedStrip;
+
+    Animator anim;
+    public Animator armAnim;
+
+    public AudioSource punchAudio;
+    public AudioSource readerAudio;
 
     int Count = 0;
 
@@ -73,6 +79,9 @@ public class cardPuncher : MonoBehaviour
         Card.Add(CardStrip8);
         Card.Add(CardStrip9);
         Card.Add(CardStrip10);
+
+        anim = this.GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -85,194 +94,261 @@ public class cardPuncher : MonoBehaviour
                 Card[Count].GetComponent<RawImage>().texture = setStrip();
             }
         }
+        else if (Count == 10)
+        {
+            anim.SetBool("finished", true);
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                anim.SetTrigger("inserting");
+                armAnim.SetTrigger("on");
+            }
+        }
     }
 
     Texture setStrip()
-    {
+    {      
         if (Input.GetKeyDown(KeyCode.Alpha0) || Input.GetKeyDown("[0]"))
         {
             Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return Strip0;
+            
         }
         else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown("[1]"))
         {
             Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return Strip1;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown("[2]"))
         {
             Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return Strip2;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown("[3]"))
         {
             Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return Strip3;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown("[4]"))
         {
             Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return Strip4;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown("[5]"))
         {
             Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return Strip5;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha6) || Input.GetKeyDown("[6]"))
         {
             Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return Strip6;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha7) || Input.GetKeyDown("[7]"))
         {
             Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return Strip7;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha8) || Input.GetKeyDown("[8]"))
         {
             Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return Strip8;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha9) || Input.GetKeyDown("[9]"))
         {
             Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return Strip9;
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
-            Count++; 
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return StripA;
         }
         else if (Input.GetKeyDown(KeyCode.B))
         {
-            Count++; 
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return StripB;
         }
         else if (Input.GetKeyDown(KeyCode.C))
         {
-            Count++; 
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return StripC;
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            Count++; 
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return StripD;
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
-            Count++; 
-            return StripE;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripE;
         }
         else if (Input.GetKeyDown(KeyCode.F))
         {
-            Count++; 
-            return StripF;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripF;
         }
         else if (Input.GetKeyDown(KeyCode.G))
         {
-            Count++; 
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); 
             return StripG;
         }
         else if (Input.GetKeyDown(KeyCode.H))
         {
-            Count++; 
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch();
             return StripH;
         }
         else if (Input.GetKeyDown(KeyCode.I))
         {
-            Count++; 
-            return StripI;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripI;
         }
         else if (Input.GetKeyDown(KeyCode.J))
         {
-            Count++; 
-            return StripJ;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripJ;
         }
         else if (Input.GetKeyDown(KeyCode.K))
         {
-            Count++; 
-            return StripK;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripK;
         }
         else if (Input.GetKeyDown(KeyCode.L))
         {
-            Count++; 
-            return StripL;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripL;
         }
         else if (Input.GetKeyDown(KeyCode.M))
         {
-            Count++; 
-            return StripM;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripM;
         }
         else if (Input.GetKeyDown(KeyCode.N))
         {
-            Count++; 
-            return StripN;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripN;
         }
         else if (Input.GetKeyDown(KeyCode.O))
         {
-            Count++; 
-            return StripO;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripO;
         }
         else if (Input.GetKeyDown(KeyCode.P))
         {
-            Count++; 
-            return StripP;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripP;
         }
         else if (Input.GetKeyDown(KeyCode.Q))
         {
-            Count++; 
-            return StripQ;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripQ;
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
-            Count++; 
-            return StripR;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripR;
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            Count++; 
-            return StripS;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripS;
         }
         else if (Input.GetKeyDown(KeyCode.T))
         {
-            Count++; 
-            return StripT;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripT;
         }
         else if (Input.GetKeyDown(KeyCode.U))
         {
-            Count++; 
-            return StripU;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripU;
         }
         else if (Input.GetKeyDown(KeyCode.V))
         {
-            Count++; 
-            return StripV;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripV;
         }
         else if (Input.GetKeyDown(KeyCode.W))
         {
-            Count++; 
-            return StripW;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripW;
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
-            Count++; 
-            return StripX;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripX;
         }
         else if (Input.GetKeyDown(KeyCode.Y))
         {
-            Count++; 
-            return StripY;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripY;
         }
         else if (Input.GetKeyDown(KeyCode.Z))
         {
-            Count++; 
-            return StripZ;
+            Count++;
+            anim.SetTrigger("keyPress");
+            playPunch(); return StripZ;
         }
         else
         {
             return StripBlank;
         }
         
+    }
+    void playPunch()
+    {
+        punchAudio.Play(0);
     }
 }
