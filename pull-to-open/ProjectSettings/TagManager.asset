@@ -13,6 +13,12 @@ TagManager:
   - GreenWire
   - YellowWire
   - book
+  - Card1
+  - Card2
+  - Card3
+  - Card4
+  - Card5
+  - WinCard
   layers:
   - Default
   - TransparentFX
