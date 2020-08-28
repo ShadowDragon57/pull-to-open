@@ -84,7 +84,7 @@ public class CoverAssignment : MonoBehaviour
     void Update()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //
+        
         if (Physics.Raycast(ray, out hit))
         {
             Cover = hit.collider.gameObject.GetComponent<bookVariables>().cover;

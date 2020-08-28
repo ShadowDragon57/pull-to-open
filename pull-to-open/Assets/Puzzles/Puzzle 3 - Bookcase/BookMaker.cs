@@ -23,7 +23,6 @@ public class BookMaker : MonoBehaviour
 
     List<GameObject> books = new List<GameObject>();
 
-    int Colour;
     public Material red;
     public Material blue;
     public Material green;

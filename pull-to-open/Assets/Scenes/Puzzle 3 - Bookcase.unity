@@ -2467,7 +2467,6 @@ GameObject:
   - component: {fileID: 2012505996}
   - component: {fileID: 2012505995}
   - component: {fileID: 2012505994}
-  - component: {fileID: 2012505998}
   m_Layer: 0
   m_Name: Big Book
   m_TagString: Untagged
@@ -2549,39 +2548,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 74.032005, z: 0}
---- !u!114 &2012505998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2012505993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c776b4ae26a39dc4d8dc2676fcf535b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Book1: {fileID: 0}
-  Book2: {fileID: 0}
-  Book3: {fileID: 0}
-  Book4: {fileID: 0}
-  Book5: {fileID: 0}
-  Book6: {fileID: 0}
-  Book7: {fileID: 0}
-  Book8: {fileID: 0}
-  Book9: {fileID: 0}
-  Book10: {fileID: 0}
-  Book11: {fileID: 0}
-  Book12: {fileID: 0}
-  Book13: {fileID: 0}
-  Book14: {fileID: 0}
-  Book15: {fileID: 0}
-  red: {fileID: 0}
-  blue: {fileID: 0}
-  green: {fileID: 0}
-  yellow: {fileID: 0}
-  black: {fileID: 0}
-  white: {fileID: 0}
 --- !u!1 &2020506636
 GameObject:
   m_ObjectHideFlags: 0

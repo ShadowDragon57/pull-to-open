@@ -1135,7 +1135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030722522}
   - component: {fileID: 1030722523}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5 cards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2218,7 +2218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2009834975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Card 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
