@@ -56,8 +56,6 @@ public class cardPuncher : MonoBehaviour
     public Texture StripZ;
     public Texture StripBlank;
 
-    Texture selectedStrip;
-
     Animator anim;
     public Animator armAnim;
 
@@ -65,6 +63,10 @@ public class cardPuncher : MonoBehaviour
     public AudioSource readerAudio;
 
     int Count = 0;
+
+    public GameObject code;
+    string password;
+    string entered="";
 
     // Start is called before the first frame update
     void Start()
@@ -81,7 +83,7 @@ public class cardPuncher : MonoBehaviour
         Card.Add(CardStrip10);
 
         anim = this.GetComponent<Animator>();
-
+        SetCode();
     }
 
     // Update is called once per frame
@@ -102,7 +104,60 @@ public class cardPuncher : MonoBehaviour
             {
                 anim.SetTrigger("inserting");
                 armAnim.SetTrigger("on");
+                if (password == entered)
+                {
+                    Debug.Log("Complete");
+                }
             }
+        }
+    }
+
+    void SetCode()
+    {
+        int random = Random.Range(0, 8);
+
+        switch(random)
+        {
+            case 0:
+                code.GetComponent<Text>().text = "ZTQ03MSRL147FDCXAVKI";
+                Debug.Log(random);
+                password = "TH3NUMB3RS";
+                break;
+            case 1:
+                code.GetComponent<Text>().text = "TV3RZ7XIF1SALKQ40CMD";
+                Debug.Log(random);
+                password = "W3CANTDO1T";
+                break;
+            case 2:
+                code.GetComponent<Text>().text = "TS07MAF1LX3ZKIR4CVQD";
+                Debug.Log(random);
+                password = "WHY5S0COLD";
+                break;
+            case 3:
+                code.GetComponent<Text>().text = "430LZ1QR7ACMVTKXSIFD";
+                Debug.Log(random);
+                password = "TYME70DUEL";
+                break;
+            case 4:
+                code.GetComponent<Text>().text = "1SDQTM7ZFK34IAVRCXL";
+                Debug.Log(random);
+                password = "PLY0FTHGME";
+                break;
+            case 5:
+                code.GetComponent<Text>().text = "7R3DF4ZLVQMCXT1IKSA";
+                Debug.Log(random);
+                password = "M0US7ASH3S";
+                break;
+            case 6:
+                code.GetComponent<Text>().text = "KCDQXV7IFZSA4RTM31L";
+                Debug.Log(random);
+                password = "1R0NWAL1G0";
+                break;
+            case 7:
+                code.GetComponent<Text>().text = "MSDFAILTQV3X1K4ZCR7";
+                Debug.Log(random);
+                password = "I7SDE27INY";
+                break;
         }
     }
 
@@ -113,6 +168,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "0";
             return Strip0;
             
         }
@@ -121,6 +177,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "1";
             return Strip1;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown("[2]"))
@@ -128,6 +185,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "2";
             return Strip2;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown("[3]"))
@@ -135,6 +193,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "3";
             return Strip3;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown("[4]"))
@@ -142,6 +201,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "4";
             return Strip4;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown("[5]"))
@@ -149,6 +209,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "5";
             return Strip5;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha6) || Input.GetKeyDown("[6]"))
@@ -156,6 +217,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "6";
             return Strip6;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha7) || Input.GetKeyDown("[7]"))
@@ -163,6 +225,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "7";
             return Strip7;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha8) || Input.GetKeyDown("[8]"))
@@ -170,6 +233,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "8";
             return Strip8;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha9) || Input.GetKeyDown("[9]"))
@@ -177,6 +241,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "9";
             return Strip9;
         }
         else if (Input.GetKeyDown(KeyCode.A))
@@ -184,6 +249,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "A";
             return StripA;
         }
         else if (Input.GetKeyDown(KeyCode.B))
@@ -191,6 +257,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "B";
             return StripB;
         }
         else if (Input.GetKeyDown(KeyCode.C))
@@ -198,6 +265,7 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "C";
             return StripC;
         }
         else if (Input.GetKeyDown(KeyCode.D))
@@ -205,25 +273,31 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "D";
             return StripD;
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripE;
+            playPunch();
+            entered += "E";
+            return StripE;
         }
         else if (Input.GetKeyDown(KeyCode.F))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripF;
+            playPunch();
+            entered += "F"; 
+            return StripF;
         }
         else if (Input.GetKeyDown(KeyCode.G))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); 
+            playPunch();
+            entered += "G";
             return StripG;
         }
         else if (Input.GetKeyDown(KeyCode.H))
@@ -231,115 +305,152 @@ public class cardPuncher : MonoBehaviour
             Count++;
             anim.SetTrigger("keyPress");
             playPunch();
+            entered += "H";
             return StripH;
         }
         else if (Input.GetKeyDown(KeyCode.I))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripI;
+            playPunch();
+            entered += "I";
+            return StripI;
         }
         else if (Input.GetKeyDown(KeyCode.J))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripJ;
+            playPunch();
+            entered += "J";
+            return StripJ;
         }
         else if (Input.GetKeyDown(KeyCode.K))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripK;
+            playPunch();
+            entered += "K";
+            return StripK;
         }
         else if (Input.GetKeyDown(KeyCode.L))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripL;
+            playPunch();
+            entered += "L";
+            return StripL;
         }
         else if (Input.GetKeyDown(KeyCode.M))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripM;
+            playPunch();
+            entered += "M";
+            return StripM;
         }
         else if (Input.GetKeyDown(KeyCode.N))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripN;
+            playPunch();
+            entered += "N";
+            return StripN;
         }
         else if (Input.GetKeyDown(KeyCode.O))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripO;
+            playPunch();
+            entered += "O";
+            return StripO;
         }
         else if (Input.GetKeyDown(KeyCode.P))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripP;
+            playPunch();
+            entered += "P";
+            return StripP;
         }
         else if (Input.GetKeyDown(KeyCode.Q))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripQ;
+            playPunch();
+            entered += "Q";
+            return StripQ;
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripR;
+            playPunch();
+            entered += "R";
+            return StripR;
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripS;
+            playPunch();
+            entered += "S";
+            return StripS;
         }
         else if (Input.GetKeyDown(KeyCode.T))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripT;
+            playPunch();
+            entered += "T";
+            return StripT;
         }
         else if (Input.GetKeyDown(KeyCode.U))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripU;
+            playPunch();
+            entered += "U";
+            return StripU;
         }
         else if (Input.GetKeyDown(KeyCode.V))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripV;
+            playPunch();
+            entered += "V";
+            return StripV;
         }
         else if (Input.GetKeyDown(KeyCode.W))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripW;
+            playPunch();
+            entered += "W";
+            return StripW;
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripX;
+            playPunch();
+            entered += "X";
+            return StripX;
         }
         else if (Input.GetKeyDown(KeyCode.Y))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripY;
+            playPunch();
+            entered += "Y";
+            return StripY;
         }
         else if (Input.GetKeyDown(KeyCode.Z))
         {
             Count++;
             anim.SetTrigger("keyPress");
-            playPunch(); return StripZ;
+            playPunch();
+            entered += "Z";
+            return StripZ;
         }
         else
         {
