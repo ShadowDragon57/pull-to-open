@@ -15,6 +15,7 @@ public class PlayingCards_Click_V1 : MonoBehaviour
     private GameObject winText;
 
     GameObject clickedCard;
+    GameObject icon;
 
     public int rightOrderCounter;
 
@@ -132,6 +133,8 @@ public class PlayingCards_Click_V1 : MonoBehaviour
             rightOrderCounter = 5;
             counter.text = rightOrderCounter.ToString();
             winText.SetActive(true);
+            icon = GameObject.FindWithTag("CardIcon");
+            icon.GetComponent<UIVariables>().completed = true;
         }
         else if(rightOrderCounter < 4)
         {

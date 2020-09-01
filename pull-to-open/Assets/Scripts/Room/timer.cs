@@ -12,6 +12,12 @@ public class timer : MonoBehaviour
     public float timeRemaining;
     public bool timerIsRunning = false;
 
+    public GameObject icon1;
+    public GameObject icon2;
+    public GameObject icon3;
+    public GameObject icon4;
+
+
     public Text timeText;
 
 
@@ -30,6 +36,33 @@ public class timer : MonoBehaviour
             {
                 timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
+            }
+            else if(icon1.activeInHierarchy && icon1.GetComponent<UIVariables>().completed == true && icon2.activeInHierarchy && icon2.GetComponent<UIVariables>().completed == true)
+            {
+                if (icon3.activeInHierarchy)
+                {
+                    if (icon3.GetComponent<UIVariables>().completed == true)
+                    {
+                        if (icon4.activeInHierarchy)
+                        {
+                            if (icon4.GetComponent<UIVariables>().completed == true)
+                            {
+                                timerIsRunning = false;
+                                Debug.Log("YOU WIN");
+                            }
+                        }
+                        else
+                        {
+                            timerIsRunning = false;
+                            Debug.Log("YOU WIN");
+                        }
+                    }
+                }
+                else
+                {
+                    timerIsRunning = false;
+                    Debug.Log("YOU WIN");
+                }
             }
             else
             {

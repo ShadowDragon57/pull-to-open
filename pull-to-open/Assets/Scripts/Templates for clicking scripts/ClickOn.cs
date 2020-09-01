@@ -9,6 +9,10 @@ public class ClickOn : MonoBehaviour
     [SerializeField]
     private Material green;
 
+   
+    GameObject icon;
+
+
     private MeshRenderer myRend;
 
     void Start()
@@ -19,5 +23,7 @@ public class ClickOn : MonoBehaviour
     public void ClickMe() 
     {
         myRend.material = green; //changes the colour of whatever component the Click class has collided with.
+        icon = GameObject.FindWithTag("WireIcon");
+        icon.GetComponent<UIVariables>().completed = true;
     }
 }

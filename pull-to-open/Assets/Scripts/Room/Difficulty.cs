@@ -41,15 +41,20 @@ public class Difficulty : MonoBehaviour
         puzzles.Add("cards");
         puzzles.Add("bookcase");
         puzzles.Add("punchreader");
-        puzzles.Add("safe");
-        puzzles.Add("phone");
+        //puzzles.Add("safe");
+        //puzzles.Add("phone");
     }
-    
+
+    void Update()
+    {
+            
+    }
+
     void ShufflePuzzles<T>(List<T> puzzlesList)
     {
         System.Random random = new System.Random();
         
-        for (int i=0; i<6; i++)
+        for (int i=0; i<4; i++)
         {
             int j = random.Next(i+1);
             var temp = puzzlesList[i];
@@ -70,7 +75,7 @@ public class Difficulty : MonoBehaviour
     {
         LoadPuzzles();
         ShufflePuzzles(puzzles);
-        spawnPuzzles(4, puzzles);
+        spawnPuzzles(3, puzzles);
         timer.GetComponent<timer>().timerIsRunning = true;
     }
 
@@ -78,7 +83,7 @@ public class Difficulty : MonoBehaviour
     {
         LoadPuzzles();
         ShufflePuzzles(puzzles);
-        spawnPuzzles(6, puzzles);
+        spawnPuzzles(4, puzzles);
         timer.GetComponent<timer>().timerIsRunning = true;
     }
 
@@ -100,21 +105,25 @@ public class Difficulty : MonoBehaviour
                     puzzlesUI[i].GetComponent<RawImage>().texture = wires;
                     puzzlesUI[i].GetComponent<UIVariables>().puzzle = "wires";
                     puzzlesUI[i].GetComponent<UIVariables>().completed = false;
+                    puzzlesUI[i].tag = "WiresIcon";
                     break;
                 case "cards":
                     puzzlesUI[i].GetComponent<RawImage>().texture = cards;
                     puzzlesUI[i].GetComponent<UIVariables>().puzzle = "cards";
                     puzzlesUI[i].GetComponent<UIVariables>().completed = false;
+                    puzzlesUI[i].tag = "CardsIcon";
                     break;
                 case "bookcase":
                     puzzlesUI[i].GetComponent<RawImage>().texture = books;
                     puzzlesUI[i].GetComponent<UIVariables>().puzzle = "bookcase";
                     puzzlesUI[i].GetComponent<UIVariables>().completed = false;
+                    puzzlesUI[i].tag = "BooksIcon";
                     break;
                 case "punchreader":
                     puzzlesUI[i].GetComponent<RawImage>().texture = punched;
                     puzzlesUI[i].GetComponent<UIVariables>().puzzle = "punchreader";
                     puzzlesUI[i].GetComponent<UIVariables>().completed = false;
+                    puzzlesUI[i].tag = "PunchedIcon";
                     break;
                 case "safe":
                     puzzlesUI[i].GetComponent<RawImage>().texture = safe;

@@ -64,6 +64,8 @@ public class cardPuncher : MonoBehaviour
 
     int Count = 0;
 
+    public GameObject icon;
+
     public GameObject code;
     string password;
     string entered="";
@@ -107,6 +109,8 @@ public class cardPuncher : MonoBehaviour
                 if (password == entered)
                 {
                     Debug.Log("Complete");
+                    icon = GameObject.FindWithTag("PunchedIcon");
+                    icon.GetComponent<UIVariables>().completed = true;
                 }
             }
         }
