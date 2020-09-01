@@ -5625,6 +5625,10 @@ MonoBehaviour:
   timerMins: 5
   timeRemaining: 0
   timerIsRunning: 0
+  icon1: {fileID: 0}
+  icon2: {fileID: 0}
+  icon3: {fileID: 0}
+  icon4: {fileID: 0}
   timeText: {fileID: 900582029}
 --- !u!1 &922756213
 GameObject:

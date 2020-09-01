@@ -10,6 +10,11 @@ TagManager:
   - Card3
   - Card4
   - Card5
+  - MainUI
+  - WiresIcon
+  - CardsIcon
+  - BooksIcon
+  - PunchedIcon
   layers:
   - Default
   - TransparentFX

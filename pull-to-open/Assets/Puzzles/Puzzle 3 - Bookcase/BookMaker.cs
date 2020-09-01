@@ -57,7 +57,7 @@ public class BookMaker : MonoBehaviour
             colourRandom = Random.Range(0, 6);
             books[i].GetComponent<Renderer>().material = bookColour(colourRandom);
             books[i].GetComponent<bookVariables>().colour = colourRandom;
-            books[i].GetComponent<bookVariables>().cover = Random.Range(0, 15);
+            books[i].GetComponent<bookVariables>().cover = Random.Range(0, 14);
         }
         
     }

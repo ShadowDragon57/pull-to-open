@@ -8,7 +8,6 @@ public class CoverAssignment : MonoBehaviour
     public Material display;
     public Material elite;
     public Material entrance;
-    public Material forward;
     public Material keep;
     public Material key;
     public Material KTANE;
@@ -41,39 +40,36 @@ public class CoverAssignment : MonoBehaviour
                 BigBook.GetComponent<Renderer>().material = entrance;
                 break;
             case 3:
-                BigBook.GetComponent<Renderer>().material = forward;
-                break;
-            case 4:
                 BigBook.GetComponent<Renderer>().material = keep;
                 break;
-            case 5:
+            case 4:
                 BigBook.GetComponent<Renderer>().material = key;
                 break;
-            case 6:
+            case 5:
                 BigBook.GetComponent<Renderer>().material = KTANE;
                 break;
-            case 7:
+            case 6:
                 BigBook.GetComponent<Renderer>().material = not;
                 break;
-            case 8:
+            case 7:
                 BigBook.GetComponent<Renderer>().material = power;
                 break;
-            case 9:
+            case 8:
                 BigBook.GetComponent<Renderer>().material = reading;
                 break;
-            case 10:
+            case 9:
                 BigBook.GetComponent<Renderer>().material = satan;
                 break;
-            case 11:
+            case 10:
                 BigBook.GetComponent<Renderer>().material = secret;
                 break;
-            case 12:
+            case 11:
                 BigBook.GetComponent<Renderer>().material = stalin;
                 break;
-            case 13:
+            case 12:
                 BigBook.GetComponent<Renderer>().material = together;
                 break;
-            case 14:
+            case 13:
                 BigBook.GetComponent<Renderer>().material = works;
                 break;
 
